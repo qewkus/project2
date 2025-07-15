@@ -20,9 +20,7 @@ print(filter_by_state(operations, state="CANCELED"))
 
 def sort_by_date(operations: list, descending: bool = True) -> list:
     """Возвращает новый список, отсортированный по дате."""
-    return sorted(
-        operations, key=lambda operation: operation["date"], reverse=descending
-    )
+    return sorted(operations, key=lambda operation: operation["date"], reverse=descending)
 
 
 print(sort_by_date(operations, descending=False))
