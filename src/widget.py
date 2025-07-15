@@ -28,6 +28,8 @@ def get_date(date_string: str) -> str:
     # Разбираю строку даты и времени в объект datetime
     date_obj = datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%S.%f")
     # Форматирую объект datetime в строку формата "ДД.ММ.ГГГГ"
+    if date_obj == "":
+        raise  ValueError("Вы не ввели дату")
     return f"{date_obj.day:02}.{date_obj.month:02}.{date_obj.year}"
 
 
