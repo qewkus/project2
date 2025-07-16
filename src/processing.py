@@ -12,7 +12,10 @@ def filter_by_state(operations: list, state: str = "EXECUTED") -> list:
     for operation in operations:
         if operation.get("state") == state:
             filter.append(operation)
-    return filter
+    if filter != []:
+        return filter
+    else:
+        raise KeyError("Словарей для такого статуса нет")
 
 
 print(filter_by_state(operations, state="CANCELED"))

@@ -26,6 +26,8 @@ print(mask_account_card("Счет 73654108430135874305"))
 def get_date(date_string: str) -> str:
     """Возвращаю строку с датой."""
     # Разбираю строку даты и времени в объект datetime
+    if date_string == "":
+        raise ValueError("Вы не ввели дату")
     date_obj = datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%S.%f")
     # Форматирую объект datetime в строку формата "ДД.ММ.ГГГГ"
     return f"{date_obj.day:02}.{date_obj.month:02}.{date_obj.year}"
