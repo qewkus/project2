@@ -11,9 +11,11 @@ def transaction_descriptions(transactions):
 
 
 def card_number_generator(start, stop):
+    if start <= 0 or stop <= 0:
+        raise ValueError("Неверный диапозон")
     for number in range(start, stop + 1):
         result = str(number).zfill(16)
-        if "0000 0000 0000 0001" <= result <= "9999 9999 9999 9999":
+        if "0000000000000001" <= result <= "9999999999999999":
             yield f"{result[:4]} {result[4:8]} {result[8:12]} {result[-4:]}"
 
 if __name__ == '__main__':

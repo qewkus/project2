@@ -40,4 +40,12 @@ def test_transaction_descriptions_empty_list(transactions):
         assert next(generator_empty)
 
 
+def test_card_number_generator():
+    expected = ["0000 0000 0000 0001", "0000 0000 0000 0002"]
+    assert list(card_number_generator(1, 2)) == expected
 
+
+def test_card_number_generator_range():
+    with pytest.raises(ValueError):
+        generator_range = card_number_generator(-1, -5)
+        assert next(generator_range)
