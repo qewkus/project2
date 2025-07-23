@@ -1,22 +1,30 @@
-def filter_by_currency(transactions, currency):
+from typing import Any, Dict, Generator, List, Optional
+
+
+def filter_by_currency(transactions: List[Dict[str, Any]], currency: str) -> Generator[Dict[str, Any], None, None]:
+    """Генерирует транзакции, соответствующие заданной валюте."""
     for transaction in transactions:
         if transaction.get("operationAmount", {}).get("currency", {}).get("code") == currency:
             yield transaction
 
 
-def transaction_descriptions(transactions):
+def transaction_descriptions(transactions: List[Dict[str, Any]]) -> Generator[str, None, None]:
+    """Генерирует описания транзакций."""
     for transaction in transactions:
-        if "description" in transaction:
-            yield transaction.get("description")
+        description = transaction.get("description")
+        if description is not None:  # Проверяем, что описание не None
+            yield description
 
 
-def card_number_generator(start, stop):
+def card_number_generator(start: int, stop: int) -> Generator[str, None, None]:
+    """Генерирует номера карт в формате XXXX XXXX XXXX XXXX в заданном диапазоне."""
     if start <= 0 or stop <= 0:
         raise ValueError("Неверный диапозон")
     for number in range(start, stop + 1):
         result = str(number).zfill(16)
         if "0000000000000001" <= result <= "9999999999999999":
             yield f"{result[:4]} {result[4:8]} {result[8:12]} {result[-4:]}"
+
 
 # if __name__ == '__main__':
 #
@@ -110,10 +118,3 @@ def card_number_generator(start, stop):
 #
 #     for card_number in card_number_generator(1, 5):
 #         print(card_number)
-
-
-
-
-
-
-
