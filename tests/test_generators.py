@@ -16,3 +16,13 @@ def test_filter_by_currency(transactions):
                                    'to': 'Счет 75651667383060284188'}
 
 
+def test_filter_by_currency_empty(transactions):
+    with pytest.raises(StopIteration):
+        generator_bel = filter_by_currency(transactions, "BEL")
+        assert next(generator_bel)
+
+
+def test_filter_by_currency_empty_list(transactions):
+    with pytest.raises(StopIteration):
+        generator_empty_list = filter_by_currency("", "USD")
+        assert next(generator_empty_list)
