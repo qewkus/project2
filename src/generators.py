@@ -1,21 +1,24 @@
-from typing import Any, Dict, List
-
-import pytest
-
-
-@pytest.fixture
-def operations() -> List[Dict[str, Any]]:
-    return [
-        {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
-        {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
-        {"id": 594226727, "state": "CANCELED", "date": "2018-09-12T21:27:25.241689"},
-        {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
-    ]
+def filter_by_currency(transactions, currency):
+    for transaction in transactions:
+        if transaction.get("operationAmount", {}).get("currency", {}).get("code") == currency:
+            yield transaction
 
 
-@pytest.fixture
-def transactions():
-    return (
+def transaction_descriptions(transactions):
+    for transaction in transactions:
+        if "description" in transaction:
+            yield transaction.get("description")
+
+
+def card_number_generator(start, stop):
+    for number in range(start, stop + 1):
+        result = str(number).zfill(16)
+        if "0000 0000 0000 0001" <= result <= "9999 9999 9999 9999":
+            yield f"{result[:4]} {result[4:8]} {result[8:12]} {result[-4:]}"
+
+if __name__ == '__main__':
+
+    transactions = (
         [
             {
                 "id": 939719570,
@@ -94,3 +97,21 @@ def transactions():
             }
         ]
     )
+
+    usd_transactions = filter_by_currency(transactions, "USD")
+    for _ in range(2):
+        print(next(usd_transactions))
+
+    descriptions = transaction_descriptions(transactions)
+    for _ in range(5):
+        print(next(descriptions))
+
+    for card_number in card_number_generator(1, 5):
+        print(card_number)
+
+
+
+
+
+
+
