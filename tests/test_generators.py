@@ -26,3 +26,18 @@ def test_filter_by_currency_empty_list(transactions):
     with pytest.raises(StopIteration):
         generator_empty_list = filter_by_currency("", "USD")
         assert next(generator_empty_list)
+
+
+def test_transaction_descriptions(transactions):
+    generator_descriptions = transaction_descriptions(transactions)
+    assert next(generator_descriptions) == "Перевод организации"
+    assert next(generator_descriptions) == "Перевод со счета на счет"
+
+
+def test_transaction_descriptions_empty_list(transactions):
+    with pytest.raises(StopIteration):
+        generator_empty = transaction_descriptions("")
+        assert next(generator_empty)
+
+
+
