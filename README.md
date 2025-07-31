@@ -183,6 +183,86 @@ transactions = (
     ]
 )
 
+# Модуль decorators
+
+Модуль decorators содержит декоратор log, который можно использовать для логирования выполнения функций.
+
+## Декоратор log
+
+Декоратор log принимает один необязательный аргумент:
+
+- filename: строка, указывающая имя файла для записи логов. Если не указано, логи будут выводиться в консоль.
+
+#### Пример использования
+
+python
+from decorators import log
+
+@log(filename="mylog.txt")
+def my_function(x, y):
+    return x + y
+
+▎Вызов функции
+
+my_function(1, 2)
+
+**Ожидаемый вывод в лог-файл mylog.txt при успешном выполнении:**
+
+my_function ok
+
+**Ожидаемый вывод при ошибке:**
+
+python
+@log(filename="mylog.txt")
+def myfunctionwith_error(x, y):
+    return x / y  # Деление на ноль вызовет ошибку
+
+myfunctionwith_error(1, 0)
+
+Вывод в лог-файл mylog.txt:
+
+myfunctionwith_error error: division by zero. Inputs: (1, 0), {}
+
+## Тестирование
+
+Для запуска тестов используйте команду:
+
+bash
+pytest
+
+Тесты проверяют корректность работы декоратора, включая:
+
+- Логирование успешных вызовов функций.
+- Обработку ошибок и соответствующее логирование.
+- Проверку вывода в консоль с использованием фикстуры capsys.
+
+### Пример теста
+
+Вот пример теста, который проверяет функциональность декоратора:
+
+python
+import pytest
+from decorators import log
+
+@log()
+def testfunctionsuccess():
+    return 1 + 1
+
+@log()
+def testfunctionerror():
+    return 1 / 0
+
+def testlogsuccess(capsys):
+    testfunctionsuccess()
+    captured = capsys.readouterr()
+    assert "testfunctionsuccess ok" in captured.out
+
+def testlogerror(capsys):
+    with pytest.raises(ZeroDivisionError):
+        testfunctionerror()
+    captured = capsys.readouterr()
+    assert "testfunctionerror error: division by zero." in captured.out
+
 ## Установка
 
 Для установки необходимых зависимостей выполните команду:
