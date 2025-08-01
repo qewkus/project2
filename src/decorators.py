@@ -4,6 +4,7 @@ from typing import Any, Callable
 
 
 def log(filename: str = "") -> Callable:
+    """Декоратор для логирования выполнения функции."""
     def inner(func: Callable) -> Callable:
         @wraps(func)
         def wrapper(*args: Any, **kwargs: Any) -> Any:
@@ -30,6 +31,7 @@ def log(filename: str = "") -> Callable:
 
 @log(filename="mylog.txt")
 def my_function(x: int, y: int) -> int:
+    """Суммирует два числа."""
     return x + y
 
 
@@ -39,6 +41,7 @@ print(my_function(1, 2))
 
 @log()
 def my_function_1(x: int, y: int) -> int:
+    """Умножает два числа."""
     return x * y
 
 
