@@ -1,3 +1,22 @@
 2025-08-01 01:53:37.241418, 2025-08-01 01:53:37.241422, my_function ok
 2025-08-01 01:53:37.268471, 2025-08-01 01:53:37.268474, my_function ok
 2025-08-01 01:53:37.269980, 2025-08-01 01:53:37.269984, my_function error: 'unsupported operand type(s) for +: 'int' and 'str''. Inputs: (1, 'b'), {}
+2025-08-06 03:46:57.514679, 2025-08-06 03:46:57.514683, my_function ok
+2025-08-06 03:46:57.921997, 2025-08-06 03:46:57.921999, my_function ok
+2025-08-06 03:46:57.924154, 2025-08-06 03:46:57.924159, my_function error: 'unsupported operand type(s) for +: 'int' and 'str''. Inputs: (1, 'b'), {}
+2025-08-06 03:47:38.199401, 2025-08-06 03:47:38.199405, my_function ok
+2025-08-06 03:47:38.573417, 2025-08-06 03:47:38.573420, my_function ok
+2025-08-06 03:47:38.576055, 2025-08-06 03:47:38.576061, my_function error: 'unsupported operand type(s) for +: 'int' and 'str''. Inputs: (1, 'b'), {}
+2025-08-06 03:47:46.491304, 2025-08-06 03:47:46.491308, my_function ok
+2025-08-06 03:47:46.889688, 2025-08-06 03:47:46.889691, my_function ok
+2025-08-06 03:47:46.891970, 2025-08-06 03:47:46.891975, my_function error: 'unsupported operand type(s) for +: 'int' and 'str''. Inputs: (1, 'b'), {}
+2025-08-06 03:49:45.842909, 2025-08-06 03:49:45.842912, my_function ok
+2025-08-06 03:49:46.190901, 2025-08-06 03:49:46.190906, my_function error: 'my_function() missing 2 required positional arguments: 'x' and 'y''. Inputs: (), {}
+2025-08-06 03:49:46.220430, 2025-08-06 03:49:46.220432, my_function ok
+2025-08-06 03:49:46.222045, 2025-08-06 03:49:46.222050, my_function error: 'unsupported operand type(s) for +: 'int' and 'str''. Inputs: (1, 'b'), {}
+2025-08-06 03:51:45.940274, 2025-08-06 03:51:45.940279, my_function ok
+2025-08-06 03:51:46.312731, 2025-08-06 03:51:46.312733, my_function ok
+2025-08-06 03:51:46.315162, 2025-08-06 03:51:46.315168, my_function error: 'unsupported operand type(s) for +: 'int' and 'str''. Inputs: (1, 'b'), {}
+2025-08-06 03:55:08.596632, 2025-08-06 03:55:08.596636, my_function ok
+2025-08-06 03:55:08.976232, 2025-08-06 03:55:08.976235, my_function ok
+2025-08-06 03:55:08.978026, 2025-08-06 03:55:08.978031, my_function error: 'unsupported operand type(s) for +: 'int' and 'str''. Inputs: (1, 'b'), {}
