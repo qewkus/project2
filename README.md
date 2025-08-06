@@ -263,6 +263,90 @@ def testlogerror(capsys):
     captured = capsys.readouterr()
     assert "testfunctionerror error: division by zero." in captured.out
 
+## Currency Conversion Tool
+
+Этот проект предоставляет функцию для конвертации сумм транзакций из различных валют в рубли (RUB) с использованием API для получения актуальных курсов валют.
+
+## Описание
+
+Функция currency_conversion принимает список транзакций в формате JSON и возвращает общую сумму всех транзакций в рублях. Если транзакция уже в рублях, она добавляется к общей сумме, в противном случае сумма конвертируется с использованием API для получения актуального курса.
+
+## Установка
+
+1. **Клонируйте репозиторий**:
+
+   
+bash
+   git clone https://github.com/ваш_репозиторий.git
+   cd ваш_репозиторий
+   
+
+2. **Создайте виртуальное окружение** (опционально):
+
+   
+bash
+   python -m venv venv
+   source venv/bin/activate  # Для Linux/Mac
+   venv\Scripts\activate  # Для Windows
+   
+
+3. **Установите зависимости**:
+
+   Убедитесь, что у вас установлен requests и python-dotenv:
+
+   
+bash
+   pip install requests python-dotenv
+   
+
+4. **Настройте переменные окружения**:
+
+   Создайте файл .env в корне проекта и добавьте ваш API-ключ:
+
+   
+   APIKEY=вашключотapi
+   
+
+## Использование
+
+1. **Подготовьте файл с транзакциями**:
+
+   Создайте файл operations.json в директории data с содержимым в следующем формате:
+
+   
+json
+   [
+       {
+           "operationAmount": {
+               "amount": "1000",
+               "currency": {
+                   "code": "USD"
+               }
+           }
+       },
+       {
+           "operationAmount": {
+               "amount": "2000",
+               "currency": {
+                   "code": "RUB"
+               }
+           }
+       }
+   ]
+   
+
+2. **Запустите скрипт**:
+
+   Вызовите функцию currency_conversion с данными из вашего JSON-файла:
+
+   
+python
+   from yourmodule import readjsonfile, currencyconversion
+
+   transactions = readjsonfile("data/operations.json")
+   totalamount = currencyconversion(transactions)
+   print(f"Общая сумма в рублях: {total_amount} RUB")
+
 ## Установка
 
 Для установки необходимых зависимостей выполните команду:
