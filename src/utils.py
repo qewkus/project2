@@ -1,27 +1,27 @@
 import json
-import os
-import requests
 import logging
-from typing import Any, Dict, List, Union
-from dotenv import load_dotenv
+import os
 from pathlib import Path
+from typing import Any, Dict, List, Union
 
+import requests
+from dotenv import load_dotenv
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
-LOG_DIR = ROOT_DIR / 'logs'
+LOG_DIR = ROOT_DIR / "logs"
 
 if not os.path.exists(LOG_DIR):
     os.makedirs(LOG_DIR)
 
 logging.basicConfig(
-    filename=LOG_DIR/'utils.log',
-    filemode='w',
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    filename=LOG_DIR / "utils.log",
+    filemode="w",
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.DEBUG,
-    encoding='utf-8'
+    encoding="utf-8",
 )
 
-logger = logging.getLogger('utils')
+logger = logging.getLogger("utils")
 
 load_dotenv()
 
@@ -44,15 +44,23 @@ def currency_conversion(transactions: List[Dict[str, Any]]) -> float:
     """Функция, которая принимает на вход транзакции и возвращает сумму транзакций в рублях."""
     total_amount_rub = 0.0
     for transaction in transactions:
-        operation_amount = transaction["operationAmount"]
-        amount = float(operation_amount["amount"])
-        code = operation_amount["currency"]["code"]
+        operation_amount = transaction.get("operationAmount")
+        if not operation_amount:
+            logger.warning(f"Отсутствует поле operationAmount в транзакции: {transaction}")
+            continue
+
+        try:
+            amount = float(operation_amount.get("amount"))
+            code = operation_amount["currency"]["code"]
+        except (TypeError, ValueError, KeyError) as e:
+            logger.error(f"Ошибка чтения данных транзакции: {e}, транзакция: {transaction}")
+            continue
         if code == "RUB":
             logger.debug("Конвертация не требуется")
             total_amount_rub += amount
         else:
-            base_url = "https://api.apilayer.com/exchangerates_data/convert"
-            url = f"{base_url}?to=RUB&from={code}&amount={transaction['operationAmount']['amount']}"
+            base_url = "https://api.apilayer.com/exchangerates_data/latest"
+            url = f"{base_url}?base=USD&symbols=RUB"
             token_api = os.getenv("API_KEY")
             payload: Dict[str, Any] = {}
             headers = {"apikey": token_api}
@@ -60,10 +68,34 @@ def currency_conversion(transactions: List[Dict[str, Any]]) -> float:
             response = requests.get(url, headers=headers, data=payload)
 
             results = response.json()
-            converted_amount = float(results['operationAmount']['amount'])
-            total_amount_rub += converted_amount
+            if "rates" in results and "USD" in results["rates"]:
+                converted_amount = float(results["rates"])
+                total_amount_rub += converted_amount
     logger.info("Всё окей")
     return round(total_amount_rub)
 
 
 print(currency_conversion(read_json_file("../data/operations.json")))
+
+# def test_currency_api(from_currency="USD", to_currency="RUB", amount=1):
+#     base_url = "https://api.apilayer.com/exchangerates_data/latest"
+#     token_api = os.getenv("API_KEY")
+#     if not token_api:
+#         print("❌ Переменная окружения API_KEY не установлена")
+#         return
+#
+#     url = f"{base_url}?base={from_currency}&symbols={to_currency}"
+#     headers = {"apikey": token_api}
+#
+#     try:
+#         response = requests.get(url, headers=headers, timeout=5)
+#         response.raise_for_status()
+#         results = response.json()
+#         print("📦 Полный ответ API:")
+#         print(results)
+#     except requests.RequestException as e:
+#         print(f"❌ Ошибка запроса: {e}")
+#
+# # Запуск теста
+# if __name__ == "__main__":
+#     test_currency_api()

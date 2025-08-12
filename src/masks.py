@@ -2,22 +2,22 @@ import logging
 import os
 from pathlib import Path
 
-
 ROOT_DIR = Path(__file__).resolve().parent.parent
-LOG_DIR = ROOT_DIR / 'logs'
+LOG_DIR = ROOT_DIR / "logs"
 
 if not os.path.exists(LOG_DIR):
     os.makedirs(LOG_DIR)
 
 logging.basicConfig(
-    filename=LOG_DIR/'masks.log',
-    filemode='w',
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    filename=LOG_DIR / "masks.log",
+    filemode="w",
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.DEBUG,
-    encoding='utf-8'
+    encoding="utf-8",
 )
 
-logger = logging.getLogger('masks')
+logger = logging.getLogger("masks")
+
 
 def get_mask_card_number(card: str) -> str:
     """Возвращает замаскированный номер карты."""

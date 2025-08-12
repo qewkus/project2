@@ -1,4 +1,154 @@
-2025-08-13 01:30:52,869 - utils - INFO - Всё хорошо
-2025-08-13 01:30:52,869 - utils - DEBUG - Конвертация не требуется
-2025-08-13 01:30:52,870 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
-2025-08-13 01:30:53,545 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/convert?to=RUB&from=USD&amount=8221.37 HTTP/1.1" 401 48
+2025-08-13 02:25:03,172 - utils - INFO - Всё хорошо
+2025-08-13 02:25:03,172 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:03,174 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:03,637 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:03,638 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:04,104 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:04,105 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:04,105 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:04,575 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:04,575 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:04,576 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:05,265 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:05,266 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:05,731 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:05,731 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:06,151 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:06,151 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:06,152 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:06,743 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:06,745 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:07,371 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:07,372 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:07,372 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:07,372 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:07,373 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:07,904 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:07,905 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:07,907 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:08,358 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:08,359 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:08,972 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:08,973 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:09,456 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:09,456 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:09,457 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:09,896 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:09,897 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:10,351 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:10,352 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:10,822 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:10,822 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:10,822 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:10,823 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:11,323 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:11,324 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:11,997 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:11,998 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:11,998 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:12,589 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:12,591 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:13,040 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:13,040 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:13,041 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:13,502 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:13,503 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:13,989 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:13,990 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:13,990 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:13,992 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:14,461 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:14,461 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:14,461 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:14,461 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:14,461 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:14,462 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:14,936 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:14,937 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:15,385 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:15,386 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:15,386 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:15,387 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:15,814 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:15,815 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:15,815 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:16,275 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:16,276 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:16,921 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:16,922 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:17,524 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:17,526 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:18,005 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:18,006 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:18,006 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:18,008 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:18,625 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:18,628 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:19,328 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:19,328 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:19,330 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:19,936 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:19,937 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:19,937 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:19,937 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:19,938 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:20,390 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:20,392 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:20,826 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:20,828 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:21,299 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:21,300 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:21,917 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:21,918 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:22,554 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:22,556 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:23,067 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:23,068 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:23,068 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:23,068 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:23,068 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:23,703 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:23,705 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:24,231 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:24,232 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:24,232 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:24,232 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:24,232 - utils - WARNING - Отсутствует поле operationAmount в транзакции: {}
+2025-08-13 02:25:24,232 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:24,233 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:24,692 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:24,692 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:24,693 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:25,150 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:25,151 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:25,152 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:25,596 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:25,597 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:26,174 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:26,175 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:26,175 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:26,175 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:26,175 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:26,175 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:26,175 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:26,175 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:26,175 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:26,176 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:26,600 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:26,602 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:27,044 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:27,045 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:27,647 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:27,648 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:28,145 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:28,147 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:28,564 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:28,565 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:29,023 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:29,024 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:29,024 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:29,025 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:25:29,469 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
+2025-08-13 02:25:29,469 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:29,470 - utils - DEBUG - Конвертация не требуется
+2025-08-13 02:25:29,470 - utils - INFO - Всё окей
