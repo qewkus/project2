@@ -76,26 +76,3 @@ def currency_conversion(transactions: List[Dict[str, Any]]) -> float:
 
 
 print(currency_conversion(read_json_file("../data/operations.json")))
-
-# def test_currency_api(from_currency="USD", to_currency="RUB", amount=1):
-#     base_url = "https://api.apilayer.com/exchangerates_data/latest"
-#     token_api = os.getenv("API_KEY")
-#     if not token_api:
-#         print("❌ Переменная окружения API_KEY не установлена")
-#         return
-#
-#     url = f"{base_url}?base={from_currency}&symbols={to_currency}"
-#     headers = {"apikey": token_api}
-#
-#     try:
-#         response = requests.get(url, headers=headers, timeout=5)
-#         response.raise_for_status()
-#         results = response.json()
-#         print("📦 Полный ответ API:")
-#         print(results)
-#     except requests.RequestException as e:
-#         print(f"❌ Ошибка запроса: {e}")
-#
-# # Запуск теста
-# if __name__ == "__main__":
-#     test_currency_api()
