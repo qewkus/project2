@@ -1,0 +1,4 @@
+2025-08-13 01:30:52,869 - utils - INFO - Всё хорошо
+2025-08-13 01:30:52,869 - utils - DEBUG - Конвертация не требуется
+2025-08-13 01:30:52,870 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 01:30:53,545 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/convert?to=RUB&from=USD&amount=8221.37 HTTP/1.1" 401 48
