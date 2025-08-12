@@ -43,3 +43,4 @@ def currency_conversion(transactions: List[Dict[str, Any]]) -> float:
 
 
 # print(currency_conversion(read_json_file("../data/operations.json")))
+
