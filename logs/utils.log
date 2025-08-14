@@ -1,0 +1,3 @@
+2025-08-13 02:29:54,169 - utils - INFO - Всё хорошо
+2025-08-13 02:29:54,171 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.apilayer.com:443
+2025-08-13 02:29:54,795 - urllib3.connectionpool - DEBUG - https://api.apilayer.com:443 "GET /exchangerates_data/latest?base=USD&symbols=RUB HTTP/1.1" 403 45
