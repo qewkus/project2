@@ -1,12 +1,14 @@
+from typing import Any
 from unittest.mock import mock_open, patch
 
 from src.utils import currency_conversion, read_json_file
 
+
 @patch("os.path.exists")
-def test_read_json_file(mock_os) -> None:
+def test_read_json_file(mock_os: Any) -> None:
     mock_os.return_value = True
     with patch("builtins.open", mock_open(read_data='{"1":"2"}')):
-        assert read_json_file("a") == {"1":"2"}
+        assert read_json_file("a") == {"1": "2"}
     assert read_json_file("") == []
 
 
