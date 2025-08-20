@@ -347,6 +347,12 @@ python
    totalamount = currencyconversion(transactions)
    print(f"Общая сумма в рублях: {total_amount} RUB")
 
+# Модуль trasaction importer
+В нём мы реализовали считывание финансовых операций из CSV- и XLSX-файлов.
+
+# Тест transaction importer
+Протестировали их, тесты прошли успешно
+
 ## Установка
 
 Для установки необходимых зависимостей выполните команду:
