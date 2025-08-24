@@ -75,4 +75,10 @@ def currency_conversion(transactions: List[Dict[str, Any]]) -> float:
     return round(total_amount_rub)
 
 
-print(currency_conversion(read_json_file("../data/operations.json")))
+# print(currency_conversion(read_json_file("../data/operations.json")))
+
+
+def filter_by_currency_csv_and_excel(transactions, currency):
+    return [
+        transaction for transaction in transactions if str(transaction.get("currency_code", "")).strip().upper() == currency.upper()
+    ]

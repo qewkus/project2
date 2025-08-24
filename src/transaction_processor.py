@@ -9,10 +9,11 @@ def process_bank_search(data: list[dict], search_str: str) -> list[dict]:
         raise ValueError("Список словарей пуст")
     else:
         filtered_data = []
-        pattern = re.compile(search_str)
+        pattern = re.compile(search_str, re.IGNORECASE)
 
         for dict_ in data:
-            if pattern.search(dict_).get('description', ''):
+            description = dict_.get('description', '')
+            if isinstance(description, str) and pattern.search(description):
                 filtered_data.append(dict_)
 
         return filtered_data
