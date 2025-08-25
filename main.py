@@ -113,7 +113,14 @@ def main() -> None:
     else:
         print(f"Всего банковских операций в выборке: {len(choosen_description)}")
         for transaction in choosen_description:
-            print(transaction)
+            print(f"{transaction['date']} {transaction['description']}")
+            if 'account' in transaction:
+                print(f"Счет {transaction['account']}")
+            if 'amount' in transaction and 'currency' in transaction:
+                print(f"Сумма: {transaction['amount']} {transaction['currency']}\n")
+            else:
+                print(f"{transaction['from_account']} -> {transaction['to_account']}")
+                print(f"Сумма: {transaction['amount']} {transaction['currency']}\n")
 
 
 if __name__ == "__main__":
