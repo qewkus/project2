@@ -11,7 +11,7 @@ FILE_PATH_2 = os.path.join(ROOT_DIR, "..", "data", "transactions_excel.xlsx")
 
 def reading_operations_from_csv(file_path: str, encoding: str = "utf-8") -> List[Dict]:
     """Преобразуем файл из формата CSV в словарь"""
-    dataframe = pd.read_csv(file_path, encoding=encoding, sep=';')
+    dataframe = pd.read_csv(file_path, encoding=encoding, sep=";")
     return dataframe.to_dict("records")
 
 
