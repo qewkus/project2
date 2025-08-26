@@ -5,6 +5,7 @@ from src.processing import filter_by_state, sort_by_date
 from src.transaction_importer import reading_operations_from_csv, reading_operations_from_excel
 from src.transaction_processor import process_bank_search
 from src.utils import filter_by_currency_csv_and_excel, read_json_file
+from src.widget import get_date, mask_account_card
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 FILE_PATH_1 = os.path.join(ROOT_DIR, "data", "operations.json")
@@ -105,22 +106,45 @@ def main() -> None:
         else:
             print("Неккоректный ввод")
 
-    print("Распечатываю итоговый список транзакций...")
+    print("Распечатываю итоговый список транзакций...\n")
 
     choosen_description = list(choosen_description)
     if not choosen_description:
         print("Не найдено ни одной транзакции, подходящей под ваши условия фильтрации")
     else:
-        print(f"Всего банковских операций в выборке: {len(choosen_description)}")
+        print(f"Всего банковских операций в выборке: {len(choosen_description)}\n")
         for transaction in choosen_description:
-            print(f"{transaction['date']} {transaction['description']}")
-            if 'account' in transaction:
-                print(f"Счет {transaction['account']}")
-            if 'amount' in transaction and 'currency' in transaction:
-                print(f"Сумма: {transaction['amount']} {transaction['currency']}\n")
+            date_choosen = get_date(transaction.get("date", ""))
+            description_choosen = transaction.get("description", "")
+            from_card_and_account = transaction.get("from", "")
+            to_card_and_account = transaction.get("to", "")
+            amount_choosen = transaction.get("operationAmount", {}).get("amount") or transaction.get("amount") or "0"
+            currency_choosen = (
+                transaction.get("operationAmount", {}).get("name") or transaction.get("currency_code") or "RUB"
+            )
+
+            try:
+                masks_from = mask_account_card(from_card_and_account) if from_card_and_account else ""
+            except Exception:
+                masks_from = from_card_and_account
+
+            try:
+                masks_to = mask_account_card(to_card_and_account) if to_card_and_account else ""
+            except Exception:
+                masks_to = to_card_and_account
+
+            if masks_from and masks_to:
+                get_line = f"{masks_from} -> {masks_to}"
+            elif masks_from:
+                get_line = masks_from
+            elif masks_to:
+                get_line = masks_to
             else:
-                print(f"{transaction['from_account']} -> {transaction['to_account']}")
-                print(f"Сумма: {transaction['amount']} {transaction['currency']}\n")
+                get_line = "Нет данных"
+
+            print(f"{date_choosen} {description_choosen}")
+            print(get_line)
+            print(f"Сумма: {amount_choosen} {currency_choosen}\n")
 
 
 if __name__ == "__main__":

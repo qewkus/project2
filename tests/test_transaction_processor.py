@@ -1,15 +1,16 @@
 from collections import Counter
-from src.transaction_processor import process_bank_search, process_bank_operations
+
+from src.transaction_processor import process_bank_operations, process_bank_search
 
 
-def test_case_insensitivity():
+def test_case_insensitivity() -> None:
     """Тест на регистронезависимость"""
     data = [
         {"description": "Оплата за интернет"},
         {"description": "перевод средств"},
         {"description": "Покупка в магазине"},
         {"description": "ОПЛАТА ЗА МОБИЛЬНУЮ СВЯЗЬ"},
-        {"description": "Покупка в магазине"}
+        {"description": "Покупка в магазине"},
     ]
 
     result_lower = process_bank_search(data, "оплата")
@@ -21,18 +22,20 @@ def test_case_insensitivity():
 
     assert len(result_lower) == 2
 
-def test_search_not_found():
+
+def test_search_not_found() -> None:
     """Тест на отсутствие результатов поиска"""
     data = [
         {"description": "Оплата за интернет"},
         {"description": "перевод средств"},
-        {"description": "Покупка в магазине"}
+        {"description": "Покупка в магазине"},
     ]
 
     result = process_bank_search(data, "неизвестный запрос")
     assert result == []
 
-def test_empty_data():
+
+def test_empty_data() -> None:
     """Тест на пустой список данных"""
     try:
         process_bank_search([], "оплата")
@@ -40,7 +43,7 @@ def test_empty_data():
         assert str(e) == "Список словарей пуст"
 
 
-def test_process_bank_operations():
+def test_process_bank_operations() -> None:
     """Тестирование функции process_bank_operations"""
 
     # Подготовка данных
@@ -53,18 +56,10 @@ def test_process_bank_operations():
         {"description": "Покупка в магазине"},
     ]
 
-    categories = [
-        "Оплата за интернет",
-        "Покупка в магазине",
-        "Перевод средств"
-    ]
+    categories = ["Оплата за интернет", "Покупка в магазине", "Перевод средств"]
 
     result = process_bank_operations(data, categories)
-    expected_result = Counter({
-        "Оплата за интернет": 2,
-        "Перевод средств": 1,
-        "Покупка в магазине": 2
-    })
+    expected_result = Counter({"Оплата за интернет": 2, "Перевод средств": 1, "Покупка в магазине": 2})
 
     assert result == expected_result, f"Ожидалось: {expected_result}, Получено: {result}"
 
