@@ -10,7 +10,8 @@ def filter_by_state(operations: list, state: str = "EXECUTED") -> list:
     """Возвращает новый список словарей, у которых ключ соответствует значению."""
     filter = []
     for operation in operations:
-        if operation.get("state") == state:
+        operation_str = str(operation.get("state")).strip().upper()
+        if operation_str == state:
             filter.append(operation)
     if filter != []:
         return filter
@@ -18,12 +19,12 @@ def filter_by_state(operations: list, state: str = "EXECUTED") -> list:
         raise KeyError("Словарей для такого статуса нет")
 
 
-print(filter_by_state(operations, state="CANCELED"))
+# print(filter_by_state(operations, state="CANCELED"))
 
 
 def sort_by_date(operations: list, descending: bool = True) -> list:
     """Возвращает новый список, отсортированный по дате."""
-    return sorted(operations, key=lambda operation: operation["date"], reverse=descending)
+    return sorted(operations, key=lambda operation: str(operation.get("date")), reverse=descending)
 
 
-print(sort_by_date(operations, descending=False))
+# print(sort_by_date(operations, descending=False))
