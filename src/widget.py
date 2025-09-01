@@ -9,11 +9,11 @@ def mask_account_card(info: str) -> str:
 
     if card_type.lower().startswith(("visa", "mastercard", "maestro")):
         # Маскировка для карт
-        return f"{card_type} {number[:4]} {number[4:6]} **** {number[-4:]}"
+        return f"{card_type} {number[:4]} {number[4:6]}** **** {number[-4:]}"
 
     elif card_type.lower() == "счет":
         # Маскировка для счёта
-        return f"{card_type} {number[-4:]}"
+        return f"{card_type} **{number[-4:]}"
     else:
         raise ValueError("Неизвестный тип карты или счёта")
 
@@ -28,9 +28,13 @@ def get_date(date_string: str) -> str:
     # Разбираю строку даты и времени в объект datetime
     if date_string == "":
         raise ValueError("Вы не ввели дату")
-    date_obj = datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%S.%f")
-    # Форматирую объект datetime в строку формата "ДД.ММ.ГГГГ"
-    return f"{date_obj.day:02}.{date_obj.month:02}.{date_obj.year}"
+    try:
+        return datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%S.%f").strftime("%d.%m.%Y")
+    except ValueError:
+        try:
+            return datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%SZ").strftime("%d.%m.%Y")
+        except ValueError:
+            return "Неизвестная дата"
 
 
 # Примеры использования

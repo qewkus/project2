@@ -11,11 +11,11 @@ FILE_PATH_2 = os.path.join(ROOT_DIR, "..", "data", "transactions_excel.xlsx")
 
 def reading_operations_from_csv(file_path: str, encoding: str = "utf-8") -> List[Dict]:
     """Преобразуем файл из формата CSV в словарь"""
-    dataframe = pd.read_csv(file_path, encoding=encoding)
+    dataframe = pd.read_csv(file_path, encoding=encoding, sep=";")
     return dataframe.to_dict("records")
 
 
-print(reading_operations_from_csv(FILE_PATH_1))
+# print(reading_operations_from_csv(FILE_PATH_1))
 
 
 def reading_operations_from_excel(file_path: str) -> List[Dict]:
@@ -24,4 +24,4 @@ def reading_operations_from_excel(file_path: str) -> List[Dict]:
     return dataframe.to_dict("records")
 
 
-print(reading_operations_from_excel(FILE_PATH_2))
+# print(reading_operations_from_excel(FILE_PATH_2))

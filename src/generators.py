@@ -4,7 +4,8 @@ from typing import Any, Dict, Generator, List
 def filter_by_currency(transactions: List[Dict[str, Any]], currency: str) -> Generator[Dict[str, Any], None, None]:
     """Генерирует транзакции, соответствующие заданной валюте."""
     for transaction in transactions:
-        if transaction.get("operationAmount", {}).get("currency", {}).get("code") == currency:
+        cod = transaction.get("operationAmount", {}).get("currency", {}).get("code")
+        if cod and cod.strip().upper() == currency.upper():
             yield transaction
 
 
