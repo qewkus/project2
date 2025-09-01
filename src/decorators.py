@@ -47,4 +47,3 @@ def my_function_1(x: int, y: int) -> int:
 
 
 print(my_function_1(2, 2))
-
