@@ -1,5 +1,7 @@
+from typing import Any, Dict, List
+
 import pytest
-from typing import List, Dict, Any
+
 from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
 
 

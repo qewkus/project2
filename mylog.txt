@@ -20,3 +20,9 @@
 2025-08-06 03:55:08.596632, 2025-08-06 03:55:08.596636, my_function ok
 2025-08-06 03:55:08.976232, 2025-08-06 03:55:08.976235, my_function ok
 2025-08-06 03:55:08.978026, 2025-08-06 03:55:08.978031, my_function error: 'unsupported operand type(s) for +: 'int' and 'str''. Inputs: (1, 'b'), {}
+2025-08-21 02:45:37.586955, 2025-08-21 02:45:37.586959, my_function ok
+2025-08-21 02:45:39.089219, 2025-08-21 02:45:39.089222, my_function ok
+2025-08-21 02:45:39.090883, 2025-08-21 02:45:39.090888, my_function error: 'unsupported operand type(s) for +: 'int' and 'str''. Inputs: (1, 'b'), {}
+2025-08-25 15:06:08.351115, 2025-08-25 15:06:08.351119, my_function ok
+2025-08-25 15:06:09.246645, 2025-08-25 15:06:09.246648, my_function ok
+2025-08-25 15:06:09.248646, 2025-08-25 15:06:09.248651, my_function error: 'unsupported operand type(s) for +: 'int' and 'str''. Inputs: (1, 'b'), {}
